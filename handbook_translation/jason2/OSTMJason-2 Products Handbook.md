@@ -4,3 +4,4 @@ OSTM/Jason-2是jason-1的后续任务。这个卫星的名字是以希腊神话�
 ### 1.1.	OSTM/Jason-2产品家族的概述
 这分文档的目的是通过对产品内容和格式进行综合描述，来帮助用户使用OSTM/Jason-2产品（3种产品：可使用的地球物理数据记录（OGDR）; 临时地球物理数据记录（IGDR）；球物理数据记录（GDR））。当资料与3种产品都相关的时候，我们会标：(O)(I)GDR。
 (O)(I)GDR产品除了以下数据有差别，其余是完全相同的，有差别的数据是处理中的辅助数据（Auxiliary Data）：
+![表0 O/I/GDR产品辅助数据的区别](https://github.com/shanchuantian/altimetry/blob/master/handbook_translation/jason2/pics/table0.png)
