@@ -1,6 +1,6 @@
 **写在前面**
 
-卫星测高数据处理方面的知识，基本上都是自己看资料摸索的，所以不可避免的会有很多的不足（如果我有地方说的不明白望谅解），所以我把这些放在[GitHub](https://github.com/shanchuantian/altimetry/blob/master/DataProcessing/%E5%9F%BA%E6%9C%AC%E9%9B%B7%E8%BE%BE%E6%B5%8B%E9%AB%98%E5%B7%A5%E5%85%B7%E7%AE%B1BRAT(Basic%20Radar%20Altimetry%20Toolbox)%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E)上面，希望有人去`fork`和`pull request`，让其更完善，也希望有人可以和我讨论，把这些数据处理经验都总结起来，如果后来人跟我们有一样的困惑不至于找不到答案。
+卫星测高数据处理方面的知识，基本上都是自己看资料摸索的，所以不可避免的会有很多的不足（如果我有地方说的不明白望谅解），所以我把这些放在[GitHub](https://github.com/shanchuantian/altimetry/blob/master/DataProcessing/%E5%9F%BA%E6%9C%AC%E9%9B%B7%E8%BE%BE%E6%B5%8B%E9%AB%98%E5%B7%A5%E5%85%B7%E7%AE%B1BRAT(Basic%20Radar%20Altimetry%20Toolbox)%E7%AE%80%E5%8D%95%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)上面，希望有人去`fork`和`pull request`，让其更完善，也希望有人可以和我讨论，把这些数据处理经验都总结起来，如果后来人跟我们有一样的困惑不至于找不到答案。
 
 英文很重要，没有办法，软件是老外搞的，界面、说明文档等都英文的，如果英文好，看文档绝大部分问题应该都可以解决。我的英文水平也不好，所以看起来也有些费力，但是没有办法。所以我想做的事情，不是把英文翻译成中文，而是做资源的整合，知识脉络的整理，问题的讨论。
 
@@ -33,17 +33,16 @@ BART为开源软件，其源码挂在GitHub（[地址](https://github.com/BRAT-D
 
 ## 2.1 BRAT界面
 
- 这是BRAT的界面：![2](http://oei6q3yqv.bkt.clouddn.com/2016/10/28/brat/2.png)
+ 这是BRAT的界面：
+
+![2](http://oei6q3yqv.bkt.clouddn.com/2016/10/28/brat/2.png)
 
 用BRAT的操作流程可以概括为4个步骤（参看《brat_user_manual》16页）：
 
-1.创建Workspace（工作空间）
-
-2.创建Dataset （数据集）
-
-3.创建Operation （操作）
-
-4.创建View （视图）
+1. **创建Workspace（工作空间）**
+2. **创建Dataset （数据集）**
+3. **创建Operation （操作）**
+4. **创建View （视图）**
 
 这几个功能分别对应于界面上的选项卡。
 
@@ -124,7 +123,7 @@ File3=F:\\JA2_GPS_2PdP003_138_20080806_053833_20080806_063445.nc
 
 示例数据：链接：http://pan.baidu.com/s/1qXKaU2C 密码：3rxl
 
-![8](pic/8.png)
+![8](http://oei6q3yqv.bkt.clouddn.com/2016/10/28/brat/8.png)
 
 在这个页面，单击一个nc文件，可以查看该文件中的所有字段的**名称**、**单位**、**维度**、**详细描述**等信息，但不能看到具体的数据（需要导出后查看）。用**HDF Explorer**可以查看数据结构，并且能直接查看数据，见：[用matlab读取测高卫星jason2的netCDF格式数据的简单示例（一）](http://blog.csdn.net/shanchuan2012/article/details/52823892)。使用BRAT前一定要知道nc文件的数据格式。
 
@@ -160,7 +159,7 @@ is_bounded % 限制范围，例如 is_bounded(22.0682,lat,22.3311) 限制纬度�
 is_bounded(22.0682,lat,22.3311) && range_20hz_ku != DV
 ```
 
-![6](pic/6.png)
+![6](http://oei6q3yqv.bkt.clouddn.com/2016/10/28/brat/6.png)
 
 在`Insert formula`中，给出了很多卫星的筛选条件，可以参考。
 
@@ -174,7 +173,7 @@ is_bounded(22.0682,lat,22.3311) && range_20hz_ku != DV
 alt - range_ku
 ```
 
-![7](pic/7.png)
+![7](http://oei6q3yqv.bkt.clouddn.com/2016/10/28/brat/7.png)
 
 也可以单击`Insert formula`查看软件自带的一些计算公式，比如计算SSH（Sea Surface Height ）和SLA（Sea level anomalies ）。导出的时候就会增加一列`height`。
 
